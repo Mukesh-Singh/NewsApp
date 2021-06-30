@@ -3,26 +3,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/NewsListFragment">
 
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="com.app.news.FirstFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
+        android:id="@+id/NewsListFragment"
+        android:name="com.app.news.ui.list.NewsListFragment"
+        android:label="@string/news_fragment_label"
+        tools:layout="@layout/fragment_news_list">
 
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            app:destination="@id/DetailsFragment" />
     </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.app.news.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
+        android:id="@+id/DetailsFragment"
+        android:name="com.app.news.ui.details.NewsDetailsFragment"
+        android:label="@string/news_details_fragment_label"
+        tools:layout="@layout/fragment_news_details">
 
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            app:destination="@id/NewsListFragment" />
     </fragment>
 </navigation>

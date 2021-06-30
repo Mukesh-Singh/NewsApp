@@ -7,22 +7,23 @@
 
     <fragment
         android:id="@+id/NewsListFragment"
-        android:name="com.app.news.ui.list.NewsListFragment"
+        android:name="com.app.news.ui.news.list.NewsListFragment"
         android:label="@string/news_fragment_label"
         tools:layout="@layout/fragment_news_list">
 
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/DetailsFragment" />
+            android:id="@+id/list_to_details"
+            app:destination="@id/DetailsFragment"
+            />
     </fragment>
     <fragment
         android:id="@+id/DetailsFragment"
-        android:name="com.app.news.ui.details.NewsDetailsFragment"
+        android:name="com.app.news.ui.news.details.NewsDetailsFragment"
         android:label="@string/news_details_fragment_label"
         tools:layout="@layout/fragment_news_details">
+        <argument
+            android:name="transitionArgument"
+            app:argType="com.app.news.ui.news.list.SharedTransitionArg" />
 
-        <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/NewsListFragment" />
     </fragment>
 </navigation>

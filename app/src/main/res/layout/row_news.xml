@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        >
+        <LinearLayout
+            android:id="@+id/item_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+
+            >
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:scaleType="centerCrop"
+                android:transitionName="image"
+                />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"
+                android:transitionName="title"
+                tools:text ="The easiest way i think is as provided by the android support library:"
+                />
+
+            <TextView
+                android:id="@+id/source_and_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_marginTop="7dp"
+                tools:text ="Source"
+                android:transitionName="source"
+                />
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:layout_marginTop="15dp"
+                android:transitionName="description"
+                tools:text ="In Android applications such as Twitter (official app), when you encounter a ListView, you can pull it down (and it will bounce back when released) to refresh the content. I wonder what is the best way, in your opinion, to implement that? Some possibilities I could think of:"
+                />
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
